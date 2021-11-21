@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Shippori Antique', sans-serif;
+    background-color: aliceblue;
+}
+.gameContainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    flex-direction: row;
+}
+.gameContainer .gridContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    position: relative;
+}
+.gameContainer .gridContainer .box{
+    border: 1px solid gray;
+    border-radius: 1px;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gameContainer .gridContainer .box:hover{
+    background-color: rgb(222, 240, 240);
+    cursor: pointer;
+}
+.gameContainer .gridContainer .box .boxText{
+    display: inherit;
+}
+.gameContainer .imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* Removing the borders */
+.gameContainer .gridContainer .bt-0{
+    border-top:  0;
+}
+.gameContainer .gridContainer .br-0{
+    border-right: 0;
+}
+.gameContainer .gridContainer .bl-0{
+    border-left: 0;
+}
+.gameContainer .gridContainer .bb-0{
+    border-bottom: 0;
+}
+.gameInfo .extra{
+    text-align: center;
+    margin: 10px 0px;
+}
+h1{
+    text-align: center;
+}
+.gameInfo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.gameInfo .extra .info{
+    font-size: 16px;
+    font-weight: bold;
+}
+.gameContainer .gameInfo .extra #reset{
+    width: 120px;
+    height: 32px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 10px 5px;
+    background-color: darkslategray;
+    color: wheat;
+    box-shadow: 2px 2px 8px darkslategrey;
+    transition: all 0.8s ease;
+    font-weight: bold;
+}
+.gameContainer .gameInfo #reset:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+} 
+.gameContainer .gameInfo .extra #rulebtn{
+    width: 120px;
+    height: 32px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 10px 5px;
+    background-color: darkslategray;
+    color: wheat;
+    box-shadow: 2px 2px 8px darkslategrey;
+    transition: all 0.8s ease;
+    font-weight: bold;
+}
+.gameContainer .gameInfo #rulebtn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+} 
+#rule{
+    margin: 35px 20px;
+    display: none;
+}
+#rule h2{
+    margin: 20px 0;
+}
+#rule pre{
+    font-size: 18px;
+    font-family: 'Shippori Antique', sans-serif;
+}
+
+
+/* Responsive Code */
+@media screen and (max-width: 800px){
+    .gameContainer{
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .gameContainer .imgbox{
+        justify-content: center;
+    }
+    .gameInfo{
+        margin: 20px 0px;
+    }
+    h1{
+        font-size: 28px;
+    }
+    .gameInfo .extra{
+        align-items: center;
+    }
+    .gameContainer .gridContainer{
+        grid-template-columns: repeat(3, 22vw);
+        grid-template-rows: repeat(3, 22vw);
+    }
+}

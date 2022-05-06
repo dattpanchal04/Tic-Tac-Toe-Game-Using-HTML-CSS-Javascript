@@ -5,6 +5,7 @@
 
 This is a Tic-Tac-Toe game created using HTML, CSS & Javascript. It is made by me. You can play this game with your family & friends. This is fully responsive game. You can also play this game in your mobile phone. So, check out this game and thank you for visit !
 
+See the project online here: https://dattpanchal04.github.io/Tic-Tac-Toe-Game-Using-HTML-CSS-Javascript/
 
 ## Authors
 
